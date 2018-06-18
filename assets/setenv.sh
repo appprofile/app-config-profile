@@ -1,0 +1,15 @@
+JAVA_OPTS="XX:PermSize=${JVM_PERM_SIZE} \
+	-XX:MaxPermSize=${JVM_MAX_PERM_SIZE} \
+	-Xms${JVM_XMS} \
+	-Xmx${JVM_XMX} \
+	-XX:+UseG1GC \
+	-XX:G1HeapRegionSize=${JVM_G1_HEAP_REGION_SIZE} \
+	-d64 \
+	-server \
+	-Dcom.sun.management.jmxremote=true \
+	-Dcom.sun.management.jmxremote.authenticate=true \
+	-Dcom.sun.management.jmxremote.password.file=/jmxremote.password \
+	-Dcom.sun.management.jmxremote.access.file=/jmxremote.access \
+	-Dcom.sun.management.jmxremote.ssl=false \
+	-Dcom.sun.management.jmxremote.port=${JMX_PORT} \
+	-Djava.rmi.server.hostname=${RMI_HOSTNAME}"

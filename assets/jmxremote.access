@@ -1,0 +1,2 @@
+${JMX_USER} readwrite
+${JMX_READ_USER} readonly
